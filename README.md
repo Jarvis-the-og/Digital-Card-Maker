@@ -35,3 +35,16 @@ npx serve .
 4. Hit **Download PNG** or **Download PDF** to save your card
 
 Built with vanilla HTML, CSS, and JavaScript. Uses [html2canvas](https://html2canvas.hertzen.com/) and [jsPDF](https://parall.ax/products/jspdf/) via CDN for exports.
+
+## Implementation
+
+The app is a single `index.html` file containing all markup, styles, and logic. State lives in a plain JavaScript object and drives both the form inputs and the live card preview. Each template is a renderer function that returns HTML strings, which are injected into a `.card` element. Exports use `html2canvas` to rasterize the card at 3× scale for high-resolution PNG output, and `jsPDF` to place the same raster into a 3.5 × 2 in PDF canvas with overlaid link annotations for social URLs.
+
+## Technologies Used
+
+HTML, CSS, JavaScript, html2canvas, jsPDF
+
+## Demo Video
+
+[Youtube](https://youtu.be/pynyFVoquzQ)
+
